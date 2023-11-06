@@ -172,7 +172,7 @@ async function enviarEmailBackend(
     // Corpo do e-mail
     let info = await transporter.sendMail({
       from: "site@patense.com.br",
-      to: ["benolopesdias@gmail.com"],
+      to: ["matheustxr.profissional@gmail.com", "site@patense.com.br"],
       subject: "Quero ser um representante Zoomies",
       html: `<p>Nome: ${nome}</p>
              <p>Telefone: ${telefone}</p>
