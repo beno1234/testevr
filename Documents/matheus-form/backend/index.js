@@ -159,21 +159,21 @@ async function enviarEmailBackend(
     // Configurações do servidor SMTP
     let transporter = nodemailer.createTransport(
       smtpTransport({
-        host: "smtp-mail.outlook.com",
-        port: 587,
-        secure: false,
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
         auth: {
-          user: "site@patense.com.br",
-          pass: "p!t@n#e0623",
+          user: "vendascardealempreendimentos@gmail.com",
+          pass: "fcyrwldhmqmvkqqy",
         },
       })
     );
 
     // Corpo do e-mail
-    let info = await transporter.sendMail({
-      from: "site@patense.com.br",
-      to: ["matheustxr.profissional@gmail.com", "site@patense.com.br"],
-      subject: "Quero ser um representante Zoomies",
+    let mailOptions = {
+      from: "vendascardealempreendimentos@gmail.com",
+      to: ["benolopesdias@gmail.com"],
+      subject: "Frutal - Mensagem do formulário da landing page",
       html: `<p>Nome: ${nome}</p>
              <p>Telefone: ${telefone}</p>
              <p>E-mail: ${email}</p>
@@ -182,13 +182,19 @@ async function enviarEmailBackend(
              <p><strong>Representa:</strong> ${representa}</p>
              <p><strong>Segmento:</strong> ${segmento}</p>
              <p>Mensagem: ${mensagem}</p>`,
-      attachments: [
+    };
+
+    // Verificar se um arquivo foi fornecido antes de adicionar o anexo
+    if (propostaFile) {
+      mailOptions.attachments = [
         {
           filename: propostaName,
-          content: propostaFile.buffer,
+          content: propostaFile.buffer, // Use o buffer do arquivo
         },
-      ],
-    });
+      ];
+    }
+
+    let info = await transporter.sendMail(mailOptions);
 
     console.log("E-mail enviado: %s", info.messageId);
   } catch (err) {
