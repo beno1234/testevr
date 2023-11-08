@@ -172,7 +172,7 @@ async function enviarEmailBackend(
     // Corpo do e-mail
     let mailOptions = {
       from: "vendascardealempreendimentos@gmail.com",
-      to: ["benolopesdias@gmail.com"],
+      to: ["matheustxr.profissional@gmail.com"],
       subject: "Frutal - Mensagem do formulário da landing page",
       html: `<p>Nome: ${nome}</p>
              <p>Telefone: ${telefone}</p>
