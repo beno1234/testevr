@@ -184,6 +184,8 @@ async function enviarEmailBackend(
              <p>Mensagem: ${mensagem}</p>`,
     };
 
+    //teste
+
     // Verificar se um arquivo foi fornecido antes de adicionar o anexo
     if (propostaFile) {
       mailOptions.attachments = [
