@@ -23,4 +23,3 @@ const Footer = () => {
 };
 
 export default Footer;
-//teste
