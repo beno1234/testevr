@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: black;
+}
+
+.text-without-background {
+  background-color: transparent !important;
+}
+
+h1 {
+  font-family: "Rubik", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong,
+span {
+  color: white;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.moving-image {
+  animation: bounce 3s infinite;
+}
