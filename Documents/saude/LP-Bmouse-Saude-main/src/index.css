@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  scroll-behavior: smooth;
+  font-family: degular, sans-serif;
+  /*   background-color: #022c5e; */
+  background: url(./assets/Component.png) !important;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.bg-header {
+  background: #022c5e;
+}
+
+@media (min-width: 1024px) {
+  .bg-header {
+    background: url(./assets/bg.svg), lightgray 50%;
+    height: 95vh;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+  }
+}
+.bg-section-2 {
+  background: linear-gradient(
+    260deg,
+    #0b6fe0 42.94%,
+    rgba(11, 186, 224, 0.83) 42.94%,
+    rgba(11, 186, 224, 0) 90.22%
+  );
+}
+
+.bg-gradient {
+  background: rgb(11, 111, 224);
+  background: linear-gradient(
+    0deg,
+    rgba(11, 111, 224, 1) 0%,
+    rgba(8, 132, 174, 1) 35%,
+    rgba(3, 65, 113, 1) 100%
+  );
+}
+.bg-section-3 {
+  background-image: url(./assets/bg-section-3.svg) !important;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+.bg-section-5 {
+  background: rgb(11, 111, 224);
+  background: linear-gradient(
+    0deg,
+    rgba(11, 111, 224, 1) 0%,
+    rgba(8, 132, 174, 1) 35%,
+    rgba(3, 65, 113, 1) 100%
+  );
+}
+
+.arrow-container {
+  position: relative;
+  animation: jump 1s infinite alternate;
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.arrow {
+  transition: transform 0.2s ease-in-out;
+}
+
+.arrow-container:hover .arrow {
+  transform: translateY(-20px);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hidding {
+  display: none;
+}
+
+a {
+  scroll-behavior: smooth;
+}
